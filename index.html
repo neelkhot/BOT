@@ -1,17 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Healthcare Assistant</title>
 
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+
+  <!-- Dialogflow Messenger -->
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #e0f7fa, #e1bee7);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      color: #4a148c;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #6a1b9a;
+      font-size: 1.2rem;
+      max-width: 500px;
+    }
+
+    df-messenger {
+      --df-messenger-bot-message: #f3e5f5;
+      --df-messenger-button-titlebar-color: #7b1fa2;
+      --df-messenger-chat-background-color: #fff;
+      --df-messenger-font-color: #000;
+      --df-messenger-send-icon: #7b1fa2;
+    }
+  </style>
 </head>
 <body>
-<df-messenger
-  chat-title="healthcare"
-  agent-id="ac6f9426-a717-4986-9dcd-0960c5cdd29a"
-  language-code="en"
-></df-messenger>
+  <header>
+    <h1>Welcome to Your Healthcare Assistant</h1>
+    <p>Ask me anything about symptoms, medications, appointments, or wellness tips!</p>
+  </header>
+
+  <df-messenger
+    chat-title="Healthcare Assistant"
+    agent-id="ac6f9426-a717-4986-9dcd-0960c5cdd29a"
+    language-code="en"
+  ></df-messenger>
 </body>
 </html>
